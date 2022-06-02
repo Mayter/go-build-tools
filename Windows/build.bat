@@ -1,6 +1,6 @@
 @echo off
 
-:: »ñÈ¡µ±Ç°Ä¿Â¼Ãû
+:: è·å–å½“å‰ç›®å½•å
 set curf=%~p0%
 set curf=%curf:~0,-1%
 :getfolder
@@ -14,55 +14,55 @@ FOR /F "tokens=1,* delims=\/" %%i in ("%curf%") do (
 echo %curf%
 chdir
 ::set name="Aopo"
-echo "ÕıÔÚ±àÒë: %curf%_Linux-amd64..."
+echo "æ­£åœ¨ç¼–è¯‘: %curf%_Linux-amd64..."
 set CGO_ENABLED=0
 set GOOS=linux
 set GOARCH=amd64
 go build -ldflags "-s -w" -o ./releases/%curf%_Linux_amd64
 
 @echo off
-echo "ÕıÔÚ±àÒë: %curf%_Linux-amd..."
+echo "æ­£åœ¨ç¼–è¯‘: %curf%_Linux-amd..."
 set CGO_ENABLED=0
 set GOOS=linux
 set GOARCH=386
 go build -ldflags "-s -w" -o ./releases/%curf%_Linux_amd
 
 @echo off
-echo "ÕıÔÚ±àÒë: %curf%_Linux-arm64..."
+echo "æ­£åœ¨ç¼–è¯‘: %curf%_Linux-arm64..."
 set CGO_ENABLED=0
 set GOOS=linux
 set GOARCH=arm64
 go build -ldflags "-s -w" -o ./releases/%curf%_Linux_arm64
 
 @echo off
-echo "ÕıÔÚ±àÒë: %curf%_Linux-arm..."
+echo "æ­£åœ¨ç¼–è¯‘: %curf%_Linux-arm..."
 set CGO_ENABLED=0
 set GOOS=linux
 set GOARCH=386
 go build -ldflags "-s -w" -o ./releases/%curf%_Linux_arm
 
-echo "ÕıÔÚ±àÒë: %curf%_Windows-64..."
+echo "æ­£åœ¨ç¼–è¯‘: %curf%_Windows-64..."
 set CGO_ENABLED=0
-set GOOS=linux
+set GOOS=windows
 set GOARCH=amd64
 go build -ldflags "-s -w" -o ./releases/%curf%_Windows_64.exe
 
-echo "ÕıÔÚ±àÒë: %curf%_Windows-86..."
+echo "æ­£åœ¨ç¼–è¯‘: %curf%_Windows-86..."
 set CGO_ENABLED=0
 set GOOS=windows
 set GOARCH=386
 go build -ldflags "-s -w" -o ./releases/%curf%_Windows_86.exe
 
-echo "ÕıÔÚ±àÒë: %curf%_Mac-Intel..."
+echo "æ­£åœ¨ç¼–è¯‘: %curf%_Mac-Intel..."
 set CGO_ENABLED=0
 set GOOS=darwin
 set GOARCH=amd64
 go build -ldflags "-s -w" -o ./releases/%curf%_Intel_amd64
 
-echo "ÕıÔÚ±àÒë: %curf%_Mac-M1..."
+echo "æ­£åœ¨ç¼–è¯‘: %curf%_Mac-M1..."
 set CGO_ENABLED=0
 set GOOS=darwin
 set GOARCH=arm64
 go build -ldflags "-s -w" -o ./releases/%curf%_M1_arm64
 
-echo "=======================================END½áÊø======================================="
+echo "=======================================ENDç»“æŸ======================================="
