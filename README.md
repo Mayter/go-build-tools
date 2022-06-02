@@ -19,7 +19,7 @@ Mac Intel+Amd64
 Mac M1+Arm64
 ```
 我们只要把这几个脚本放到项目目录就可以了，他会自动获取当前目录名字然后编译到当前目录的Releases文件夹
-
+![Win](Win.png)
 References
 ```
 https://github.com/upx/upx
